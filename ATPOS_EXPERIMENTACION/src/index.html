@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<HTML>
+   <HEAD>
+      <TITLE>POS Web</TITLE>
+	  <script type="text/javascript" src="lib/idb.min.js"></script>
+	  <script type="text/javascript" src="js/db.js"></script>
+	  <script type="text/javascript" src="js/ventas.js"></script>
+   </HEAD>
+   <BODY>
+      <table>
+         <tr>
+            <td>
+               <table>
+                  <tr>
+                     <td><label>Identificación Cliente</label></td>
+                     <td><input type="text" id="idCliente"></td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <table>
+                  <tr>
+                     <th><label>Código Producto</label></th>
+                     <th><label>Cantidad</label></th>
+                     <th><label>Precio</label></th>
+                  </tr>
+                  <tr>
+                     <td><input type="text" id="codProducto1"></td>
+                     <td><input type="number" id="cantidad1"></td>
+                     <td><input type="number" id="precio1"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="text" id="codProducto2"></td>
+                     <td><input type="number" id="cantidad2"></td>
+                     <td><input type="number" id="precio2"></td>
+                  </tr>
+                  <tr>
+                     <td><input type="text" id="codProducto3"></td>
+                     <td><input type="number" id="cantidad3"></td>
+                     <td><input type="number" id="precio3"></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2"><label>Total</label></td>
+                     <td><label>5465464</label></td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+         <tr>
+            <td><button onClick="venderProductos()">Registrar</button></td>
+         </tr>
+		 <tr>
+         </tr>
+		 <tr>
+            <td><input type="number" id="iterar" min="0"><button onClick="registrarVariasVentas(document.getElementById('iterar').value)">enviar x registros</button></td>
+         </tr>
+         <tr>
+            <td><button id="tamanhotext" onClick="getsize()">tamaño db:</button></td>
+         </tr>
+      </table>
+   </BODY>
+</HTML>
